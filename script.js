@@ -1,6 +1,6 @@
 let nama = document.getElementById("nama");
 let jumlah = document.getElementById("jumlah");
-let keterangan = document.getElementById("Keterangan");
+let keterangan = document.getElementById("keterangan");
 
 console.log(nama.value);
 console.log(jumlah.value);
@@ -16,7 +16,7 @@ function simpan() {
         localStorage.setItem("belanja", "[]")
     }
 
-    let data = JSON.parse(localStorage.getItem("mahasiswa"))
+    let data = JSON.parse(localStorage.getItem("belanja"))
     console.log(data);
 
 
@@ -39,16 +39,13 @@ function tampil() {
     document.getElementById("list-belanja").innerHTML = ""
 
     hasil.forEach(element => {
-        console.log(element);
         
         document.getElementById("list-belanja").innerHTML += `
-        <div  class="col-lg-4 col-md-6 mb-5"> 
+        <div  class="col-lg-3 col-md-6 mb-5"> 
             <div class="card p-2 mt-4">
-                <div class="card-body">
-                    <h4 class="text-primary">${element.nama}</h4> 
-                    <h6 class="text-danger">${element.jumlah}</h6>
-                    <h6 class="text-secondary">${element.keterangan}</h6>
-                </div>
+                <h4 class="text-primary">${element.nama}</h4> 
+                <h6 class="text-danger">${element.jumlah}</h6>
+                <h6 class="text-secondary">${element.keterangan}</h6>
             </div>
         </div>
         

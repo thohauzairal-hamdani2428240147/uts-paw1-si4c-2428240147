@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center text-uppercase">Daftar Belanja</h1>
+        <h1 class="text-center text-uppercase bg-primary text-white p-3 rounded mt-3">Daftar Belanja</h1>
     </div>
     <div class="container">
         <h2>Nama Barang</h2>
@@ -17,9 +17,13 @@
             <input type="number" id="jumlah" placeholder="" class="form-control border-primary mb-3">
         <h2>Keterangan</h2>
             <input type="text" id="Keterangan" placeholder="" class="form-control border-primary mb-3">
-        <button class="btn btn-primary">Simpan</button>
-        
+        <button onclick="simpan()" class="btn btn-primary">Simpan</button>
+
+        <div id="list-belanja" class="row">
+        </div>
     </div>
+
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
